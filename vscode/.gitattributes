@@ -1,0 +1,14 @@
+# Set the default text behavior (in case people don't have core.autocrlf set)
+* text=auto
+
+# Don't diff package-lock.json
+package-lock.json text -diff
+
+# Force shell scripts ans SSH files to use LF endings
+*.sh      text eol=lf
+.ssh/id_* text eol=lf
+
+# Force SSL files to use LF endings
+*.cer     text eol=lf
+*.crt     text eol=lf
+*.key     text eol=lf
